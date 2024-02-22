@@ -1,0 +1,844 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         const promise1 = new Promise((resolve) => setTimeout(() => resolve('Promise 1'), 2000));
+// const promise2 = new Promise((resolve) => setTimeout(() => resolve('Promise 2'), 1500));
+// const promise3 = new Promise((resolve) => setTimeout(() => resolve('Promise 3'), 1000));
+
+// Promise.all([promise1, promise2, promise3])
+//     .then((results) => {
+//         console.log('All promises resolved:', results);
+//     })
+//     .catch((error) => {
+//         console.error('One or more promises rejected:', error);
+//     });
+
+//   let prom = new Promise((resolve,reject)=>{
+//       console.log("not inside the asynchronus code");
+//       setTimeout(()=>{
+//         if(false){
+//             resolve("I am successfull Person")
+//         }else{
+//             reject("i am unsuccessfull persion")
+//         }
+//       },2000)
+//   })
+//   prom.then((value)=>{
+//     console.log(value);
+//   }).catch((error)=>{console.log(error);})
+
+// let promise1 = new Promise((resolve)=>{
+//     setTimeout(()=>{
+//     resolve("resolve 1")
+//     },2000)
+// })
+
+// let promise2 = new Promise((reject)=>{
+//     setTimeout(()=>{
+//     reject("resolve 2")
+//     },3000)
+// })
+
+// let promise3 = new Promise((resolve)=>{
+//     setTimeout(()=>{
+//     resolve("resolve 3")
+//     },1000)
+// })
+// Promise.allSettled([promise1,promise2,promise3]).then((result)=>{
+//     console.log("Promise All Results",result);
+// }).catch((error)=>{console.log("Promise all Error",error);})
+
+
+// for (let i = 1; i <= 5; i++) {
+//     for (let j = 1; j <= 5; j++) {
+//         console.log(`${i} * ${j} = ${i * j}`);
+//     }
+// }
+
+// for (let i = 1; i <= 5; i++) {
+//     let pattern = '';
+//     for (let j = 1; j <= i; j++) {
+//         pattern += '* ';
+//     }
+//     console.log(pattern);
+// }
+
+// for(let i=1; i<=5; i++){
+//     let pattern ='';
+//     for(let j=1; j<=i; j++){
+//         pattern +='* ';
+//     }
+//     console.log(pattern);
+// }
+
+// for(let i=1; i<=5; i++){
+//     let pattern='';
+//     for(let j=1; j<=i; j++){
+//         pattern +="* ";
+//     }
+//     console.log(pattern);
+// }
+
+// for(let i=1; i<=5; i++){
+//     let pattern='';
+//     for(let j=1; j<=i; j++){
+//         pattern+='* ';
+//     }
+//     console.log(pattern);
+// }
+
+// for(let i=1; i<=6; i++){
+//     let pattern ="";
+//     for(let j=1; j<=i; j++){
+//         pattern += "*  "
+//     }
+//     console.log(pattern);
+// }
+
+// for(let i=1; i<=5; i++){
+//     let pattern="";
+//     for(let j=1; j<=i; j++){
+//         pattern+="*  "
+//     }
+//     console.log(pattern);
+// }
+
+// const matrix = [
+//     [1, 2, 3],
+//     [4, 5, 6],
+//     [7, 8, 9]
+// ];
+
+// for (let i = 0; i < matrix.length; i++) {
+//     for (let j = 0; j < matrix[i].length; j++) {
+//         console.log(`matrix[${i}][${j}] = ${matrix[i][j]}`);
+//     }
+// }
+
+// const image = [
+//     [255, 120, 50],
+//     [100, 200, 150],
+//     [30, 180, 220]
+// ];
+
+// // Adjust brightness by multiplying each pixel value
+// const brightnessFactor = 1.5;
+// for (let i = 0; i < image.length; i++) {
+//     for (let j = 0; j < image[i].length; j++) {
+//         image[i][j] *= brightnessFactor;
+//     }
+//     console.log(image);
+// }
+
+//  for(let i=1; i<=5; i++){
+//     let pattern ="";
+//     for(let j=1; j<=i; j++){
+//         pattern+="*  ";
+//     }
+//     console.log(pattern);
+//  }
+
+// const height = 5;
+
+// for (let i = 1; i <= height; i++) {
+//     let spaces = ' '.repeat(height - i);
+//     let stars = '*'.repeat(2 * i - 1);
+//     console.log(spaces + stars);
+// }
+
+// const size = 8;
+
+// for (let i = 1; i <= size; i++) {
+//     let row = '';
+//     for (let j = 1; j <= size; j++) {
+//         if ((i + j) % 2 === 0) {
+//             row += '#';
+//         } else {
+//             row += ' ';
+//         }
+//     }
+//     console.log(row);
+// }
+
+// Multiplication table for numbers 1 to 5
+// for (let i = 1; i <= 5; i++) {
+//   console.log(`Multiplication table for ${i}:`);
+  
+//   for (let j = 1; j <= 10; j++) {
+//     console.log(`${i} x ${j} = ${i * j}`);
+//   }
+//   console.log(); // Add a newline for better readability
+// }
+
+
+// Two-dimensional array
+// const matrix = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9]
+// ];
+
+// // Iterating through the elements of the matrix using nested loops
+// for (let i = 0; i < matrix.length; i++) {
+//   for (let j = 0; j < matrix[i].length; j++) {
+//     console.log(`Element at position (${i}, ${j}): ${matrix[i][j]}`);
+//   }
+// }
+
+// Create a pattern using nested loops
+// for (let i = 1; i <= 5; i++) {
+//   let pattern = '';
+  
+//   for (let j = 1; j <= i; j++) {
+//     pattern += '* ';
+//   }
+  
+//   console.log(pattern);
+// }
+
+// for(let i=1; i<=5; i++){
+//     let pattern ='';
+//     for(let j=1; j<=i; j++){
+//         pattern+= '* ';
+//     }
+//     console.log(pattern);
+// }
+
+// for(let i=1; i<=5; i++){
+//     let pattern='';
+//     for(let j=1; j<=i; j++){
+//         pattern+='*  ';
+//     }
+//     console.log(pattern);
+// }
+
+// for(let i=1; i<=5; i++){
+//     let pattern ='';
+//     for(let j=1; j<=i; j++){
+//         pattern+='* ';
+//     }
+//     console.log(pattern);
+// }
+
+// Displaying a simple calendar for a month with 5 weeks
+// const daysInWeek = 7;
+// const weeksInMonth = 5;
+
+// for (let week = 1; week <= weeksInMonth; week++) {
+//   console.log(`Week ${week}:`);
+  
+//   for (let day = 1; day <= daysInWeek; day++) {
+//     console.log(`  Day ${day} of the week`);
+//     // Additional code to display events or other information for each day
+//   }
+  
+//   console.log(); // Add a newline for better readability
+// }
+
+// Representing a Tic-Tac-Toe board
+// const ticTacToeBoard = [
+//   ['O', 'X', 'O'],
+//   ['X', 'O', 'X'],
+//   ['O', 'X', 'O']
+// ];
+
+// // Accessing individual cells
+// console.log("Middle cell value:", ticTacToeBoard[1][1]);
+
+
+// Simulating a seat reservation system using a two-dimensional array
+// const rows = 5;
+// const seatsPerRow = 8;
+
+// const seatMap = [];
+
+// // Initialize seat map with available seats
+// for (let i = 0; i < rows; i++) {
+//   seatMap[i] = [];
+//   for (let j = 0; j < seatsPerRow; j++) {
+//     seatMap[i][j] = 'Available';
+//   }
+// }
+
+// // Reserve a seat
+// function reserveSeat(row, seat) {
+//   if (seatMap[row - 1] && seatMap[row - 1][seat - 1] === 'Available') {
+//     seatMap[row - 1][seat - 1] = 'Reserved';
+//     console.log(`Seat at Row ${row}, Seat ${seat} reserved successfully.`);
+//   } else {
+//     console.log(`Seat at Row ${row}, Seat ${seat} is already reserved or invalid.`);
+//   }
+// }
+
+// // Display the current seat map
+// console.log("Current Seat Map:", seatMap);
+
+// // Example reservation
+// reserveSeat(2, 4);
+
+// // Display the updated seat map
+// console.log("Updated Seat Map:", seatMap);
+
+// let originalString="vikasjadaun";
+// let reverseString=originalString.split('').reverse().join('');
+// console.log(reverseString);
+
+// function reverseString(str){
+//     return str.split('').reverse().join('')
+// }
+// let originalString="vikasjadaun"
+// let reverseStringValue=reverseString(originalString)
+// console.log(reverseStringValue);
+    
+
+//   let str="vikasjadaun";
+//   let str1=str.length;
+//   let str2='';
+//   for(let i=str1-1; i>=0; i--){
+//     str2=str2+str[i]
+//   }
+//   console.log(str2);
+   
+//    let number =12;
+//    let number1=9;
+//    let number2=87;
+   
+//     function smallValueGet(a,b,c){
+//         return Math.min(a,b,c)
+//     }
+//     let smallValue = smallValueGet(number,number1,number2)
+//     console.log(smallValue);
+
+//   let mixedArray=[1,2,3,4,5,'vikas','jadaun','rahul',{key:'value',name:'vikas'},[2,3,4,5,6,'viveek'],true,false,undefined,undefined,true,undefined,null,null,null,]
+//   let numbers=[];
+//   let nullValue=[];
+//   let strings=[];
+//   let booleans=[];
+//   let objects=[];
+//   let arrays=[];
+//   let others=[]
+
+//     for(let elements of mixedArray){
+//         if(typeof elements ==='number'){
+//             numbers.push(elements)
+//         }else if(elements === null){
+//             nullValue.push(elements)
+//         }else if(typeof elements === 'string'){
+//             strings.push(elements)
+//         }else if(typeof elements ==='boolean'){
+//             booleans.push(elements)
+//         }else if(typeof elements === 'object' && !Array.isArray(elements)){
+//             objects.push(elements)
+//         }else if(Array.isArray(elements)){
+//             arrays.push(elements)
+//         }else{
+//             others.push(elements)
+//         }
+//     }
+//     console.log("number",numbers);
+//     console.log("null",nullValue);
+//     console.log("string",strings);
+//     console.log("boolean",booleans);
+//     console.log("object",objects);
+//     console.log("array",arrays);
+//     console.log("others",others);
+
+    //  let number =12;
+    //  let number1=134;
+    //  let number2=89;
+     
+    //   function largeValue(a,b,c){
+    //     return Math.max(a,b,c)
+    //   }
+    //   let result=largeValue(number,number1,number2)
+    //   console.log(result);
+
+    //   let number=12;
+    //   let number1=781;
+    //   let number2=90;
+
+    //   function largestValue(a,b,c){
+    //     if(a>b && a>c){
+    //         return a 
+    //     }else if(b>a && b>c){
+    //         return b 
+    //     }else{
+    //         return c
+    //     }
+    //   }
+    //    let largeValueGet= largestValue(number,number1,number2)
+    //    let result =largeValueGet ;
+    //    console.log(result);
+
+    //    function checkFirstElement(array){
+    //      if(Array.isArray(array) && array.length>=0 && array[0]===5){
+    //         return array
+    //      }else{
+    //         return null
+    //      }
+    //    }
+     
+    //     let array1=[5,4,3,2,1]
+    //     let result =checkFirstElement(array1)
+    //     console.log(result);
+
+    //   function assendingOrder(arry){
+    //     return arry.sort((a,b)=>a-b)
+    //   }
+    //   let array1 = [1,2,3,4,0,0,0,0,0,9,8,7,6,5,4,3,2,1,1,1,2,3,4,5,0,0,0,0]
+    //   let result = assendingOrder(array1)
+    //   console.log(result);
+
+        // for(let i=1; i<=5; i++){
+        //     let pattern = '';
+        //     for(let j=1; j<=i; j++){
+        //         pattern+='* ';
+        //     }
+        //     console.log(pattern);
+        // }
+          
+        //  for(let i=1; i<=5; i++){
+        //     let pattern='';
+        //     for(let j=5; j>=i; j--){
+        //         pattern+='* ';
+        //     }
+        //     console.log(pattern);
+        //  }
+
+        //  for(let i=1; i<=5; i++){
+        //     let pattern ='';
+        //     for(let j=5; j>=i; j--){
+        //         pattern+= j+' ' ;
+        //     }
+        //     console.log(pattern);
+        //  }
+
+        //  function PrintPattern(pattern){
+        //       for(let i=1; i<=pattern; i++){
+        //         let pattern1='';
+        //         for(let j=pattern; j>=i; j--){
+        //             pattern1+='* ';
+        //         }
+        //         return pattern1
+        //       }
+        //  }
+        //  let result = PrintPattern(5)
+        //  console.log(result);
+   
+
+//         class Car {
+//   // Private method
+//   #startEngine() {
+//     console.log("Engine started!");
+//   }
+
+//   // Public method
+//   accelerate(speed) {
+//     console.log(`Accelerating to ${speed} km/h`);
+//     this.#startEngine(); // Private method called within the class
+//   }
+
+//   // Protected method
+//   #stopEngine() {
+//     console.log("Engine stopped!");
+//   }
+// }
+
+// const myCar = new Car();
+// myCar.accelerate(60); // Public method called from outside the class
+// // myCar.#startEngine(); // Error! Private method cannot be accessed from outside
+// // myCar.#stopEngine(); // Error! Protected method cannot be accessed from outside
+ // Object.assign() Example
+// let target = { a: 1, b: 2 };
+// let source = { b: 3, c: 4 };
+// let result = Object.assign(target, source);
+// console.log(result); // Output: { a: 1, b: 3, c: 4 }
+
+// // Object.create() Example
+// let proto = { x: 10 };
+// let newObj = Object.create(proto, { y: { value: 20 } });
+// console.log(newObj.x); // Output: 10
+// console.log(newObj.y); // Output: 20
+
+// // Object.keys() Example
+// let obj = { a: 1, b: 2, c: 3 };
+// console.log(Object.keys(obj)); // Output: ['a', 'b', 'c']
+
+// // Object.values() Example
+// console.log(Object.values(obj)); // Output: [1, 2, 3]
+
+// // Object.entries() Example
+// console.log(Object.entries(obj)); // Output: [['a', 1], ['b', 2], ['c', 3]]
+
+    //    function rev(num){
+    //     if(num===0){
+    //         return 1;
+    //     }else{
+    //         let y = num*rev(num-1)
+    //         console.log(num,y);
+    //         return y
+    //     }
+    //    }
+    //    console.log(rev(5));
+
+    //   function rev (num){
+    //     if(num===0){
+    //         return 1;
+    //     }else{
+    //         let y = num*rev(num-1)
+    //         console.log(num,y);
+    //         return y
+    //     }
+
+    //   }
+    //   console.log(rev(7));
+    // function rev(num){
+    //     if(num===0){
+    //         return 1;
+    //     }else{
+    //         let y = num*rev(num-1);
+    //         return y;
+    //     }
+    // }
+    // console.log(rev(4));
+    // function rev(num){
+    //     if(num===0){
+    //         return 1;
+    //     }else{
+    //         return num*rev(num-1)
+    //     }
+    // }
+    // console.log(rev(5));
+    //  function rev(num){
+    //     if(num===0){
+    //         return 1;
+    //     }else{
+    //         return num*rev(num-1)
+    //     }
+    //  }
+    //  console.log(rev(5));
+
+    // function rev(num){
+    //     if(num===0){
+    //         return 1;
+    //     }else{
+    //         return num*rev(num-1)
+    //     }
+    // }
+    // console.log(rev(5));
+    // function rev(num){
+    //     if(num===0){
+    //         return 1;
+    //     }else{
+    //         return num*rev(num-1)
+    //     }
+    // }
+    // console.log(rev(5));
+
+    //   for(let i=1; i<=5; i++){
+    //     let pattern='';
+    //     for(let j=5; j>=i; j--){
+    //         pattern+="* ";
+    //     }
+    //     console.log(pattern);
+    //   }
+
+    //   for(let i=1; i<=5; i++){
+    //     let pattern='';
+    //     for(let j=5; j>=i; j--){
+    //         pattern+='* ';
+    //     }
+    //     console.log(pattern);
+    //   }
+  
+
+
+    //    for(let i=1; i<=5; i++){
+    //     let pattern='';
+    //     for(let j=1; j<=i; j++){
+    //         pattern+="* ";
+    //     }
+    //     console.log(pattern);
+    //    }
+    //  for(let i=2; i<=5; i++){
+    //     let pattern='';
+    //     for(let j=1; j<=i; j++){
+    //         pattern+='*  ';
+    //     }
+    //     console.log(pattern);
+    //  }
+    //    function rev(sum){
+    //     if(sum ===0){
+    //         return 1; 
+    //     }else{
+    //       return   sum*rev(sum-1)
+    //     }
+    //    }
+    //    console.log(rev(5));
+
+    //  function rev(sum){
+    //     if(sum===0){
+    //         return 1;
+    //     }else{
+    //         return sum*rev(sum-1)
+    //     }
+    //  }
+    //  console.log(rev(5));
+
+    //   for(let i=1; i<=5; i++){
+    //     let pattern ='';
+    //     for(let j=5; j>=i; j--){
+    //         pattern+="* ";
+    //     }
+    //     console.log(pattern);
+    //   }
+
+    //  for(let i=1; i<=5; i++){
+    //     let pattern='';
+    //     for(let j=5; j>=i; j--){
+    //         pattern+='* ';
+    //     }
+    //     console.log(pattern);
+    //  }
+
+    //   function rev(sum){
+    //     if(sum===0){
+    //         return 1 ;
+    //     }else{
+    //         return sum*rev(sum-1)
+    //     }
+    //   }
+    //   console.log(rev(5));
+    //  function rev(sum){
+    //     if(sum===0){
+    //         return 1;
+    //     }else{
+    //         return sum*rev(sum-1)
+    //     }
+    //  }
+    //  console.log(rev(6));
+
+    //  function rev(sum){
+    //     if(sum===0){
+    //         return 1;
+    //     }else{
+    //         return sum*rev(sum-1)
+    //     }
+    //  }
+    //  console.log(rev(5));
+
+    //  for(let i=1; i<=5; i++){
+    //     let pattern='';
+    //     for(let j=5; j>=i; j--){
+    //         pattern+='* ';
+    //     }
+    //     console.log(pattern);
+    //  }
+
+    //   function rev(sum){
+    //     if(sum===0){
+    //         return 1;
+    //     }else{
+    //         return sum*rev(sum-1)
+    //     }
+
+    //   }
+    //   console.log(rev(4));
+ 
+//   for(let i=1; i<=5; i++){
+//     let pattern='';
+//     for(let j=6; j>=i; j--){
+//         pattern+="* ";
+//     }
+//     console.log(pattern);
+//   }
+
+    //   let a=3;
+    //   for(let i=1; i<=10; i++){
+    //     let result = i*a;
+    //     console.log(`${a} X ${i} = ${result}`);
+    //   }
+
+    //   let b =5;
+    //   for(let i=1; i<=10; i++){
+    //     let result = b*i;
+    //     console.log(`${b} X ${i} = ${result} `);
+    //   }
+     
+    //  let b=5;
+    //  for(let i=1; i<=10; i++){
+    //     let result = b*i;
+    //     console.log(`${b}X ${i} = ${result}`);
+    //  }
+        //  function sum(a){
+        //     return function(b){
+        //         return function(c){
+        //             return function(d){
+        //                 return a+b+c+d;
+        //             }
+        //         }
+        //     }
+        //  }
+        //  let result=sum(4)(4)(4)(5)
+        //  console.log(result);
+
+        //  let prom = false;
+        //   const promise=(()=>{
+        //        return new Promise((resolve,reject)=>{
+        //         console.log("not asyn inside code");
+        //         setTimeout(()=>{
+        //             if(prom){
+        //             resolve("I Am SuccessFull Person")
+        //         }else{
+        //             reject("I Am UnsuccessFull Person")
+        //         }
+        //         },2000)
+        //        })
+        //   })
+        //     promise().then((result)=>{console.log(result)
+        //         ;}).catch((error)=>{console.log(error);})
+
+//         const myPromise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     const randomNumber = Math.random();
+//     if (randomNumber < 0.5) {
+//       resolve(randomNumber);
+//     } else {
+//       reject(new Error('Random number is greater than or equal to 0.5'));
+//     }
+//   }, 1000);
+// });
+
+// myPromise
+//   .then(result => console.log('Resolved:', result))
+//   .catch(error => console.error('Rejected:', error));
+
+    //  for(let i=1; i<=5; i++){
+    //     let pattern='';
+    //     for(let j=1; j<=i; j++){
+    //         pattern+='* ';
+    //     }
+    //     console.log(pattern);
+    //  }
+    //  for(let i=1; i<=5; i++){
+    //     let pattern='';
+    //     for(let j=5; j>=i; j--){
+    //         pattern+=j +" ";
+    //     }
+    //     console.log(pattern);
+    //  }
+
+    //   for(let i=1; i<=5; i++){
+    //     let pattern='';
+    //     for(let j=1; j<=i; j++){
+    //         pattern+=j+" ";
+    //     }
+    //     console.log(pattern);
+    //   }
+
+    //  for(let i=1; i<=5; i++){
+    //     for(let j=5; j>=i; j--){
+    //         document.write(j+" ");
+    //     }
+    //     document.write("<br/>")
+    //  }
+
+    //    function generatePattern(row){
+    //     for(let i=1; i<=5; i++){
+    //         for(let j=5; j>=i; j--){
+    //             document.write(j+" ")
+    //         }
+    //         document.write("<br/>")
+    //     }
+    //    }
+    //    generatePattern(5)
+
+    //   function generatePatternNumber(row){
+    //     let currentNumber=1;
+    //     for(let i=1; i<=row; i++){
+    //         for(let j=1; j<=i; j++){
+    //             document.write(currentNumber+" ")
+    //             currentNumber++;
+    //         }
+    //         document.write("<br/>")
+    //     }
+    //   }
+    //   generatePatternNumber(6)
+
+    //    function generatePatternNumber(row){
+    //     let currentNumber=1;
+    //     for(let i=1; i<=row; i++){
+    //      let pattern='';
+    //      for(let j=1; j<=i; j++){
+    //         pattern+=`${currentNumber} `;
+    //         currentNumber++
+    //      }
+    //      console.log(pattern);
+    //     }
+    //    }
+    //    generatePatternNumber(6)
+
+    //   for(let i=1; i<=5; i++){
+    //     let pattern='';
+    //     for(let j=1; j<=i; j++){
+    //          pattern+=(j%2==0)? '0 ':'1 ';
+    //     }
+    //     console.log(pattern);
+    //   }
+
+    //  for(let i=1; i<=5; i++){
+    //     for(let j=1; j<=i; j++){
+    //         document.write((j%2==0) ? '# ' : '* ');
+    //     }
+    //     document.write("<br/>")
+    //  }
+
+    //   for(let i=1; i<=5; i++){
+    //     for(let j=1; j<=i ; j++){
+    //         document.write(j+" ");
+    //     }
+    //     document.write("<br/>")
+    //   }
+
+        // function generatePattern(row){
+        //     for(let i=1; i<=row; i++){
+        //         for(let j=row; j>=i; j--){
+        //             document.write((j%2==0) ? '# ' :'* ');
+        //         }
+        //         document.write("<br/>")
+        //     }
+        // }
+        // generatePattern(5)
+
+        //  function rev(sum){
+        //     if(sum===0){
+        //         return 1;
+        //     }else{
+        //         return sum*rev(sum-1)
+        //     }
+        //  }
+        //  let result=rev(5)
+        //  console.log(result);
+           
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript is a best programming language</title>
+</head>
+<body>
+ 
+   
+</body>
+</html>
